@@ -1,6 +1,7 @@
 import mysql.connector
 from tools import dataentering
 import base64
+import maskpass
 def ap1(query,cur):
     print("-------------Hire Employee Process-------------")
 
@@ -31,7 +32,7 @@ def ap1(query,cur):
     else:
         print("Values added successfully!!")
         while True:
-            password=input("Enter employee login password(max 8 characters, min 4, inteeger only): ")
+            password=maskpass.askpass(prompt="Enter employee login password(max 8 characters, min 4, inteeger only): ",mask="*")
             encode_password=base64.b64encode(password.encode('utf-8'))
             lp=len(password)
             if lp>8:

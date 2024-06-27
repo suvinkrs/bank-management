@@ -1,6 +1,7 @@
 from datetime import date
 from tools import dataentering
 import base64
+import maskpass
 def age(birthdate):
     if birthdate is None:
         return -1
@@ -140,7 +141,7 @@ class EmployeeEditor:
             print(decoded_pwd, "is the password.")
         elif ans == '2':
             while True:
-                __password = input("Enter employee login password (max 8 characters, min 4, integer only): ")
+                __password = maskpass.askpass(prompt="Enter employee login password (max 8 characters, min 4, integer only): ",mask="*")
                 encode_password=base64.b64encode(__password.encode('utf-8'))
                 lp = len(__password)
                 if lp > 8:
