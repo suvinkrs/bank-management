@@ -104,10 +104,10 @@ TABLES['aadhar_verify']=(
 
 #enter aadhar details directly from sql workbench
 #use the following code
-#use "database name"
-#insert into aadhar_verify(aadhar, first_name) values(43211196, "ram");
-#insert into aadhar_verify(aadhar, first_name) values(84843964, "shyam");
-#insert into aadhar_verify(aadhar, first_name) values(21218931, "pushpa");
+# use "database name";
+# insert into aadhar_verify(aadhar, first_name) values(43211196, "ram");
+# insert into aadhar_verify(aadhar, first_name) values(84843964, "shyam");
+# insert into aadhar_verify(aadhar, first_name) values(21218931, "pushpa");
 
 
 ############################################################################################
